@@ -4,11 +4,11 @@
 
 	<artifactId>sfg-pet-clinic</artifactId>
 	<groupId>guru.springframework</groupId>
-	<version>0.0.1-SNAPSHOT</version>
+	<version>0.0.1</version>
 
 	<scm>
 		<developerConnection>scm:git:https://github.com/pmarb/sfg-pet-clinic.git</developerConnection>
-		<tag>HEAD</tag>
+		<tag>sfg-pet-clinic-0.0.1</tag>
 	</scm>
 
     <modules>
