@@ -1,6 +1,7 @@
 package guru.springframework.sfgpetclinic.model;
 
 import lombok.*;
+import org.springframework.format.annotation.DateTimeFormat;
 
 import javax.persistence.*;
 import java.time.LocalDate;
@@ -39,9 +40,10 @@ public class Pet extends BaseEntity{
     private Owner owner;
 
     @Column(name = "birth_date")
+    @DateTimeFormat(pattern = "yyyy-MM-dd")
     private LocalDate birthDate;
 
-    //If i delete pet then visits are also deleted, it's mapped by pet on the other side.
+    //If I delete pet then visits are also deleted, it's mapped by pet on the other side.
     //We use new HashSet so the value is not null
     @OneToMany(cascade = CascadeType.ALL, mappedBy = "pet")
     private Set<Visit> visits = new HashSet<>();
